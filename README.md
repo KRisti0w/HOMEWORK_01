@@ -49,3 +49,30 @@ $ find ~/boost_1_69_0 -name "any.hpp"
 /home/kristina/boost_1_69_0/boost/fusion/algorithm/query/detail/any.hpp
 /home/kristina/boost_1_69_0/boost/fusion/algorithm/query/any.hpp
 /home/kristina/boost_1_69_0/boost/fusion/include/any.hpp
+```
+7) Выведите все файлы, где упоминается последовательность boost::asio:
+```bash
+$ grep -r "boost::asio" --include="*.hpp" --include="*.cpp" --include="*.h" ~/boost_1_69_0 | cut -d: -f1 | sort -u
+/home/kristina/boost_1_69_0/boost/asio/async_result.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_datagram_socket.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_deadline_timer.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_io_object.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_raw_socket.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_seq_packet_socket.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_serial_port.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_signal_set.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_socket_acceptor.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_socket.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_socket_iostream.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_socket_streambuf.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_streambuf.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_stream_socket.hpp
+/home/kristina/boost_1_69_0/boost/asio/basic_waitable_timer.hpp
+/home/kristina/boost_1_69_0/boost/asio/buffered_read_stream.hpp
+/home/kristina/boost_1_69_0/boost/asio/buffered_stream.hpp
+/home/kristina/boost_1_69_0/boost/asio/buffered_write_stream.hpp
+/home/kristina/boost_1_69_0/boost/asio/buffer.hpp
+/home/kristina/boost_1_69_0/boost/asio/buffers_iterator.hpp
+/home/kristina/boost_1_69_0/boost/asio/completion_condition.hpp ......и т.д.
+```
+
