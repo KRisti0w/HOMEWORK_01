@@ -21,8 +21,31 @@ $ find . -maxdepth 1 -type f | wc -l
 $ find . -type f | wc -l
 61191
 ```
-5.1) Подсчитаем количество заголовочных файлов (.hpp, .h)
+5.1) Подсчитаем количество заголовочных файлов (.hpp, .h):
 ```bash
 $ find . -type f \( -name "*.hpp" -o -name "*.h" \) | wc -l
 15208
 ```
+5.2) Подсчитаем количество файлов .cpp:
+```bash
+$ find . -type f -name "*.cpp" | wc -l
+13774
+```
+5.3) Подсчитаем количество остальных файлов:
+```bash
+$ find . -type f -not -name "*.hpp" -not -name "*.h" -not -name "*.cpp" | wc -l
+32209
+```
+6) Найдем полный путь до файла any.hpp:
+```bash
+$ find ~/boost_1_69_0 -name "any.hpp"
+/home/kristina/boost_1_69_0/boost/xpressive/detail/utility/any.hpp
+/home/kristina/boost_1_69_0/boost/type_erasure/any.hpp
+/home/kristina/boost_1_69_0/boost/hana/fwd/any.hpp
+/home/kristina/boost_1_69_0/boost/hana/any.hpp
+/home/kristina/boost_1_69_0/boost/proto/detail/any.hpp
+/home/kristina/boost_1_69_0/boost/spirit/home/support/algorithm/any.hpp
+/home/kristina/boost_1_69_0/boost/any.hpp
+/home/kristina/boost_1_69_0/boost/fusion/algorithm/query/detail/any.hpp
+/home/kristina/boost_1_69_0/boost/fusion/algorithm/query/any.hpp
+/home/kristina/boost_1_69_0/boost/fusion/include/any.hpp
